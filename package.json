@@ -3,7 +3,6 @@
     "dev": "wrangler dev src/index.ts",
     "deploy": "wrangler deploy --minify src/index.ts"
   },
-  "main": "src/index.ts",
   "dependencies": {
     "hono": "^4.0.0"
   },
