@@ -1,9 +1,14 @@
-import { Hono } from 'hono'
+import { Hono } from "hono";
+import { cors } from "hono/cors";
 
-const app = new Hono()
+const app = new Hono();
 
-app.get('/', (c) => {
-  return c.text('Hello Hono!')
-})
+app.use(cors());
 
-export default app
+app.get("*", async (c) => {
+  const proxyUrl = c.req.query("url") ?? "";
+  const response = await fetch(proxyUrl, c.req.raw);
+  return new Response(response.body, response);
+});
+
+export default app;
