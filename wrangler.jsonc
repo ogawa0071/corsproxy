@@ -6,7 +6,4 @@
   "observability": {
     "enabled": true,
   },
-  "vars": {
-    "BUN_VERSION": "1.4.0",
-  },
 }
