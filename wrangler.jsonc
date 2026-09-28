@@ -7,6 +7,6 @@
     "enabled": true,
   },
   "vars": {
-    "BUN_VERSION": "1.4",
+    "BUN_VERSION": "1.4.0",
   },
 }
